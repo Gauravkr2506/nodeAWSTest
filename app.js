@@ -1,5 +1,3 @@
-const express = require("express");
-const app = express();
 const port = process.env.PORT || 8080;
 const http = require("http").createServer(function (req, res) {
   res.setHeader("Access-Control-Allow-Origin", "*");

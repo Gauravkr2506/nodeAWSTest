@@ -1,17 +1,17 @@
 const app = require("express")();
-// const http = require("http").Server(app);
-// const io = require("socket.io")(http);
+const http = require("http").Server(app);
+const io = require("socket.io")(http);
 
 const port = process.env.PORT || 8081;
 
 app.get("*", (req, res) => {
-  res.send("<h1>Hello world4</h1>");
+  res.send("<h1>Hello world!!!</h1>");
 });
 
-// io.on("connection", (socket) => {
-//   console.log("a user connected");
-// });
+io.on("connection", (socket) => {
+  console.log("a user connected");
+});
 
-app.listen(port, () => {
+http.listen(port, () => {
   console.log("listening on *:" + port);
 });

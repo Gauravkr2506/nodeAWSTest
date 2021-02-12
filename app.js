@@ -5,7 +5,7 @@ const io = require("socket.io")(http);
 const port = process.env.PORT || 8081;
 
 app.get("*", (req, res) => {
-  res.send("<h1>Hello world</h1>");
+  res.send("<h1>Hello world!!</h1>");
 });
 
 let gameRooms = {};

@@ -4,7 +4,7 @@ const app = require("express")();
 
 const port = process.env.PORT || 8081;
 
-app.get("/", (req, res) => {
+app.get("*", (req, res) => {
   res.send("<h1>Hello world4</h1>");
 });
 
